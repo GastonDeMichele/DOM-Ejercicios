@@ -1,0 +1,134 @@
+/*************reset css *************/
+
+:root{
+    --main-font: sans-serif;
+    --font-size: 16px;
+    --main-color: #f7df1e;
+    --second-color: #222;
+    --main-modal-color: rgba(247,222,30,0.85);
+    --second-modal-color: rgba(34,34,34,0.85);
+    --container-wuidth: 1200px;
+}
+
+html{
+    box-sizing: border-box;
+    font-family: var(--main-font);
+    font-size: var(--font-size);
+    scroll-behavior: smooth;/*transicion para las secciones*/
+}
+
+*,
+*:before,
+*:after{
+    box-sizing: inherit;
+}
+
+body{
+    margin: 0;
+    overflow-x: hidden;
+}
+
+img{
+    max-width: 100%;
+    height: auto;
+}
+
+
+/************* menu-hamburguesa  ******************/
+
+.header{
+    position:sticky;
+    top:0;
+    padding: 1.5rem;
+    background-color: var(--main-color);
+    color: var(--second-color);
+}
+
+.header h1{
+margin: 0;
+text-align: center;
+}
+
+.section {
+padding: 2rem;
+padding-top: 5rem;
+margin-left: auto;
+margin-right: auto;
+width: 100%;
+max-width: var(--container-wuidth);
+min-height: 100vh;
+text-align: center;
+}
+
+.panel{
+    position: fixed;/*es para dejar fijo el panel*/
+    z-index: 998;/*Como al boton lo queremos siempre encima le ponemos al panel un valor menor al z-index del botón*/
+    top: 0;
+    bottom:0;
+    left:0;
+    right:0;/*con todos estos valores en 0 estiramos el panel a que ocupe toda la pantalla*/
+    width: 100%;
+    background-color: var(--second-modal-color);
+    transition: transform 0.3s ease;/*transicion del panel*/
+    /*para que el menu salga de arriba el segundo valor de translate es negativo*/
+    transform: translate(0%,-100%);
+    /*de abajo*/
+    transform: translate(0%,100%);
+    /*derecha*/
+    transform: translate(100%,0%);
+    /*izquierda*/
+    transform: translate(-100%,0%);
+  }
+
+
+/*clase que voy a agregar o quitar al panel*/
+.panel.is-active{/*cuando el panel tenga la clase panel y la clase is-active se ejecutan estos estilos*/
+    transform: translate(0,0);/*vuelve a la posicion original, es decir se ve todo el panel*/
+    opacity: 1;
+
+    
+}
+
+
+
+
+
+.panel-btn{
+position: fixed;/*significa que va fijo*/
+z-index: 999;/*por encima de todo*/
+bottom: 1vh;/*en la esquina inferior*/
+right: 1vh;/*derecha*/
+width: 4rem;/*tamaño ancho*/
+height: 4rem;/*tamaño alto*/
+border-radius: 50%;/*redondeando botoncito*/
+padding: 0;
+display: flex;/*aplico flex para centrar por que es un padre con hijos*/
+justify-content: center;
+align-items: center;/*para centrar todo el contenido*/
+background-color: var(--main-color);
+}
+
+.menu{
+    width: inherit;/*hereda la altura de su contenedor, que seria 100%*/
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;/*da espaciado proporcional entre los elementos y las horillas*/
+    align-items: center;
+    text-align: center;
+}
+
+.menu a{
+    padding: 2rem;
+    width: inherit;/*que herede la altura de su contenedor(100%)*/
+    display: block; 
+    font-size: 1.5rem;
+    text-decoration: none;
+    color: var(--main-color);
+    transition: all 0.3s ease;/*transicion para el hover*/
+}
+
+.menu a:hover{
+    font-weight: bold;
+    color: var(--second-color);
+    background-color: var(--main-modal-color);
+}
