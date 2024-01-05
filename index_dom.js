@@ -6,6 +6,7 @@ const d = document;/*para simplificar el document lo asignamos a una variable d 
 d.addEventListener("DOMContentLoaded", e => {/*llamamos la funcion dentro del evento DOMContentLoad para asegurar que primero cargue todo antes de ejecutar */
     hamburguerMenu(".panel-btn", ".panel", ".menu a")/*llamamos a la funcion y le asignamos los valores a los parametros */
     digitalClock("#reloj","#activar-reloj","#desactivar-reloj")
+    alarm("assets/alarm-clock.mp3","#activar-alarma", "#desactivar-alarma")
 })
 
 /*mediante el import podemos traer la funcion colocandola dentro de un evento y asignandole los valores desde aqui,

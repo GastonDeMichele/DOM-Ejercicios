@@ -22,6 +22,17 @@ export function digitalClock(clock, btnPlay, btnStop) {
   })
 }
 
-export function alarm() {
+export function alarm(sound,btnPlay,btnStop) {
+  let alarmaTempo;
+  const $alarm = d.createElement("audio")
 
+  d.addEventListener("click", e =>{
+    if (e.target.matches(btnPlay)) {
+      
+    }
+    if (e.target.matches(btnStop)) {
+      
+    }
+
+  })
 }
