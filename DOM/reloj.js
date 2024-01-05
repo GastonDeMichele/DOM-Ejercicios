@@ -22,6 +22,6 @@ export function digitalClock(clock, btnPlay, btnStop) {
   })
 }
 
-export function alarm() {//COMENTARIO PARA COMPROBAR QUE PUEDO HACER COMMIT
+export function alarm() {
 
 }
