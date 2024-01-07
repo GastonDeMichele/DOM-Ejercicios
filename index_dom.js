@@ -1,5 +1,8 @@
-import hamburguerMenu from "./DOM/menu_hamburguesa.js";/*importamos la funcion hamburguerMenu*/
-import { digitalClock, alarm} from "./DOM/reloj.js";
+import hamburguerMenu from "./DOM/menu_hamburguesa.js";/*cuando es una sola funcion se usa export default*/
+import { digitalClock, alarm} from "./DOM/reloj.js";//cuandon son varias solo export y se llaman entre llaves.
+import { shortCuts } from "./DOM/teclado.js";
+
+
 
 const d = document;/*para simplificar el document lo asignamos a una variable d */
 
@@ -9,6 +12,12 @@ d.addEventListener("DOMContentLoaded", e => {/*llamamos la funcion dentro del ev
     alarm("assets/alarm-clock.mp3","#activar-alarma", "#desactivar-alarma")
 })
 
-/*mediante el import podemos traer la funcion colocandola dentro de un evento y asignandole los valores desde aqui,
- solo necesitamos saber que el primer parametro es el boton que controla el panel, el segundo es el selector que es el que se va a ocultar y 
- el tercero el link que cierra una vez que seleccionamos la opcion del menu que querramos    */
+
+
+//el teclado tiene 3 eventos, keyUp(cuando soltamos la tecla), keydown(cuando presionamos) y keyPress(cuando mantenemos presionado)
+
+d.addEventListener("keydown", (e) =>{
+  shortCuts(e)
+})
+
+
