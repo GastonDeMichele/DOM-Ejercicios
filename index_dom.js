@@ -17,7 +17,7 @@ d.addEventListener("DOMContentLoaded", e => {/*llamamos la funcion dentro del ev
 //el teclado tiene 3 eventos, keyUp(cuando soltamos la tecla), keydown(cuando presionamos) y keyPress(cuando mantenemos presionado)
 
 d.addEventListener("keydown", (e) =>{
-  shortCuts(e)
+  shortCuts(e);
 })
 
 
