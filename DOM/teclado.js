@@ -18,5 +18,5 @@ export function shortCuts(e) {
     if (e.key === "p" && e.altKey) {
         alert("haz lanzado un Prompt con el teclado")
     }
-  }
+}
 
