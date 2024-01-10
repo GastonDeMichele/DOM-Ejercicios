@@ -11,18 +11,22 @@ export function moveBall(e, ball, stage) {
     switch (e.keyCode) {
         case 37:
             //move("left")
+            e.preventDefault()
             x--;
             break;
         case 38:
             //move("up")
+            e.preventDefault()
             y--;
             break;
         case 39:
             //move("right")
+            e.preventDefault()
             x++;
             break;
         case 40:
             //move("down")
+            e.preventDefault()
             y++;
             break;
         default:
