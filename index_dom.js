@@ -1,6 +1,6 @@
 import hamburguerMenu from "./DOM/menu_hamburguesa.js";/*cuando es una sola funcion se usa export default*/
 import { digitalClock, alarm } from "./DOM/reloj.js";//cuandon son varias solo export y se llaman entre llaves.
-import { shortCuts } from "./DOM/teclado.js";
+import {moveBall, shortCuts} from "./DOM/teclado.js";
 
 
 
@@ -18,6 +18,7 @@ d.addEventListener("DOMContentLoaded", e => {/*llamamos la funcion dentro del ev
 
 d.addEventListener("keydown", (e) => {
   shortCuts(e);
+  moveBall(e,".ball", ".stage")
 })
 
 
