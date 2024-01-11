@@ -4,7 +4,11 @@ let x = 0,
 
 export function moveBall(e, ball, stage) {
     const $ball = d.querySelector(ball),
-        $stage = d.querySelector(stage);
+        $stage = d.querySelector(stage),
+        limitsBall = $ball.getBoundingClientRect(),
+        limitsStage = $stage.getBoundingClientRect()
+        console.log(limitsBall, limitsStage)
+
     console.log(e.keyCode)
 
 
