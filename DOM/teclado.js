@@ -1,42 +1,42 @@
 const d = document;
 let x = 0,
-    y = 0;
+  y = 0;
 
 export function moveBall(e, ball, stage) {
-    const $ball = d.querySelector(ball),
-        $stage = d.querySelector(stage),
-        limitsBall = $ball.getBoundingClientRect(),
-        limitsStage = $stage.getBoundingClientRect()
-        console.log(limitsBall, limitsStage)
+  const $ball = d.querySelector(ball),
+    $stage = d.querySelector(stage),
+    limitsBall = $ball.getBoundingClientRect(),
+    limitsStage = $stage.getBoundingClientRect()
+  console.log(limitsBall, limitsStage)
 
-    console.log(e.keyCode)
+  console.log(e.keyCode)
 
 
-    switch (e.keyCode) {
-        case 37:
-            //move("left")
-            e.preventDefault()
-            x--;
-            break;
-        case 38:
-            //move("up")
-            e.preventDefault()
-            y--;
-            break;
-        case 39:
-            //move("right")
-            e.preventDefault()
-            x++;
-            break;
-        case 40:
-            //move("down")
-            e.preventDefault()
-            y++;
-            break;
-        default:
+  switch (e.keyCode) {
+    case 37:
+      //move("left")
+      e.preventDefault()
+      if (limitsBall.left > limitsStage.left)x--;
+      break;
+    case 38:
+      //move("up")
+      e.preventDefault()
+     if(limitsBall.top > limitsStage.top)y--;
+      break;
+    case 39:
+      //move("right")
+      e.preventDefault()
+      if (limitsBall.right < limitsStage.right)x++;
+      break;
+    case 40:
+      //move("down")
+      e.preventDefault()
+        if(limitsBall.bottom < limitsStage.bottom)y++;
+      break;
+    default:
 
-    }
-    $ball.style.transform = `translate(${x * 10}px, ${y * 10}px)`;
+  }
+  $ball.style.transform = `translate(${x * 10}px, ${y * 10}px)`;
 }
 
 
@@ -47,30 +47,25 @@ export function moveBall(e, ball, stage) {
 
 
 
+export function shortCuts(e) {
+  /*
+      console.log('Tipo de evento:', e.type);
+      console.log('Tecla:', e.key);
+      console.log('Código de tecla:', e.keyCode);
+      console.log('ctrl:', e.ctrlKey);
+      console.log('alt:', e.altKey);
+      console.log('shift:', e.shiftKey);
+      console.log(e);*/
 
+  if (e.key === "a" && e.altKey) {
+    alert("haz lanzado una alerta con el teclado")
+  }
 
+  if (e.key === "c" && e.altKey) {
+    confirm("haz lanzado una Confirmacion con el teclado")
+  }
 
-
-
-export function shortCuts(e) {/*
-    console.log('Tipo de evento:', e.type);
-    console.log('Tecla:', e.key);
-    console.log('Código de tecla:', e.keyCode);
-    console.log('ctrl:', e.ctrlKey);
-    console.log('alt:', e.altKey);
-    console.log('shift:', e.shiftKey);
-    console.log(e);*/
-
-    if (e.key === "a" && e.altKey) {
-        alert("haz lanzado una alerta con el teclado")
-    }
-
-    if (e.key === "c" && e.altKey) {
-        confirm("haz lanzado una Confirmacion con el teclado")
-    }
-
-    if (e.key === "p" && e.altKey) {
-        alert("haz lanzado un Prompt con el teclado")
-    }
+  if (e.key === "p" && e.altKey) {
+    alert("haz lanzado un Prompt con el teclado")
+  }
 }
-
