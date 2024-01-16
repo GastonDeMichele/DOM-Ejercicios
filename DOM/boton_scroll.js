@@ -16,7 +16,7 @@ export default function scrollTopButton(btn) {
     })
 
     d.addEventListener("click", (e) => {
-if (e.target.Matches(btn)) {
+if (e.target.matches(btn)) {
    w.scrollTo({//recibe un objeto 
    behavior:"smooth",
    top: 0

@@ -1,4 +1,3 @@
-import scrollTopButton from "./DOM/boton_scroll.js";
 import hamburguerMenu from "./DOM/menu_hamburguesa.js";/*cuando es una sola funcion se usa export default*/
 import { digitalClock, alarm } from "./DOM/reloj.js";//cuandon son varias solo export y se llaman entre llaves.
 import {moveBall, shortCuts} from "./DOM/teclado.js";
