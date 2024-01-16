@@ -1,7 +1,9 @@
+import scrollTopButton from "./DOM/boton_scroll.js";
 import hamburguerMenu from "./DOM/menu_hamburguesa.js";/*cuando es una sola funcion se usa export default*/
 import { digitalClock, alarm } from "./DOM/reloj.js";//cuandon son varias solo export y se llaman entre llaves.
 import {moveBall, shortCuts} from "./DOM/teclado.js";
 import countdown from '/DOM/cuenta_regresiva.js';
+import scrollTopButton from '/DOM/boton_scroll.js';
 
 
 const d = document;/*para simplificar el document lo asignamos a una variable d */
@@ -14,6 +16,7 @@ d.addEventListener("DOMContentLoaded", e => {/*llamamos la funcion dentro del ev
     "countdown",
   "Aug 08, 2024 12:00:00",
   "Felicidades hoy es tu cumpleaños numero 29")
+  scrollTopButton(".scroll-top-btn")
 })
 
 
