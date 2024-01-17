@@ -3,7 +3,7 @@ import { digitalClock, alarm } from "./DOM/reloj.js";//cuandon son varias solo e
 import {moveBall, shortCuts} from "./DOM/teclado.js";
 import countdown from '/DOM/cuenta_regresiva.js';
 import scrollTopButton from '/DOM/boton_scroll.js';
-
+import darkTheme from "/DOM/tema_oscuro.js";
 
 const d = document;/*para simplificar el document lo asignamos a una variable d */
 
@@ -16,6 +16,7 @@ d.addEventListener("DOMContentLoaded", e => {/*llamamos la funcion dentro del ev
   "Aug 08, 2024 12:00:00",
   "Felicidades hoy es tu cumpleaños numero 29")
   scrollTopButton(".scroll-top-btn")
+  darkTheme(".dark-theme-btn","dark-mode")
 })
 
 

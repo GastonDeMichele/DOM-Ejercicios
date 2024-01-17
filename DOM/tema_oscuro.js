@@ -1,5 +1,5 @@
 const d = document;
 
-export default darkTheme(btn){
-    
+export default function darkTheme(btn, dataDark){
+
 }
