@@ -1,4 +1,5 @@
-const d = document;
+const d = document,
+ls = localStorage;
 
 export default function darkTheme(btn, classDark) {
     const $themebtn = d.querySelector(btn),
@@ -7,15 +8,30 @@ export default function darkTheme(btn, classDark) {
     let moon = "🌙",
         sun = "☀️";
 
+
+
+    const darktMode = () => {
+        $selectors.forEach((el) => el.classList.add(classDark));
+        $themebtn.textContent = sun;
+        ls.setItem("")
+    }
+
+    const lightMode = () => {
+        $selectors.forEach((el) => el.classList.remove(classDark));
+        $themebtn.textContent = moon;
+    }
+
     d.addEventListener("click", (e) => {
         if (e.target.matches(btn)) {
-            if($themebtn.textContent === moon){
-            $selectors.forEach((el) => el.classList.add(classDark));
-            $themebtn.textContent = sun;
-        } else {
-            $selectors.forEach((el) => el.classList.remove(classDark));
-            $themebtn.textContent = moon;
+            if ($themebtn.textContent === moon) {
+                darktMode()
+            } else {
+                lightMode()
+            }
         }
-    }
+    });
+
+    d.addEventListener("DOMContentLoaded", (e) => {
+
     })
 }

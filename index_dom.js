@@ -16,9 +16,9 @@ d.addEventListener("DOMContentLoaded", e => {/*llamamos la funcion dentro del ev
   "Aug 08, 2024 12:00:00",
   "Felicidades hoy es tu cumpleaños numero 29")
   scrollTopButton(".scroll-top-btn")
-  darkTheme(".dark-theme-btn","dark-mode")
-})
 
+})
+darkTheme(".dark-theme-btn","dark-mode")
 
 
 //el teclado tiene 3 eventos, keyUp(cuando soltamos la tecla), keydown(cuando presionamos) y keyPress(cuando mantenemos presionado)
