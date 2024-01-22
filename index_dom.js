@@ -4,7 +4,8 @@ import { moveBall, shortCuts } from "./DOM/teclado.js";
 import countdown from '/DOM/cuenta_regresiva.js';
 import scrollTopButton from '/DOM/boton_scroll.js';
 import darkTheme from "/DOM/tema_oscuro.js";
-import responsiveResponsible from "/DOM/responsive_responsible.js"
+import responsiveResponsible from "/DOM/responsive_responsible.js";
+
 
 const d = document; /*para simplificar el document lo asignamos a una variable d */
 
@@ -24,14 +25,15 @@ d.addEventListener("DOMContentLoaded", e => {
   responsiveResponsible(
     "youtube",
     "(min-width: 1024px)",
+    "Contenido desktop",
     "Contenido movil",
-    "Contenido desktop"
+    
     )
     responsiveResponsible(
-    "gmaps",
+    "gmap",
     "(min-width: 1024px)",
+    "Contenido desktop",
     "Contenido movil",
-    "Contenido desktop"
     )
 
 })
