@@ -25,15 +25,16 @@ d.addEventListener("DOMContentLoaded", e => {
   responsiveResponsible(
     "youtube",
     "(min-width: 1024px)",
-    "Contenido desktop",
-    "Contenido movil",
+    `<iframe width="560" height="315" src="https://www.youtube.com/embed/6IwUl-4pAzc?si=fijD6NttrZO-clVU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>`,
+    `<a href="https://youtu.be/6IwUl-4pAzc?si=yyu_YFz2U49L4FKt" target ="_blank">Ver video</a>`
+
     
     )
     responsiveResponsible(
     "gmap",
     "(min-width: 1024px)",
-    "Contenido desktop",
-    "Contenido movil",
+
+    
     )
 
 })
