@@ -33,6 +33,9 @@ d.addEventListener("DOMContentLoaded", e => {
     responsiveResponsible(
     "gmap",
     "(min-width: 1024px)",
+   ` <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3189.6550043595025!2d-60.30140812480622!3d-36.92251227221254!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x959446a6b2df54a9%3A0x2d03e960a9a721da!2sLas%20Margaritas%202099%2C%20Olavarr%C3%ADa%2C%20Provincia%20de%20Buenos%20Aires!5e0!3m2!1ses-419!2sar!4v1706017808790!5m2!1ses-419!2sar" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>`,
+   `<a href="https://maps.app.goo.gl/zh9TvMeHFFb59noU7" target ="_blank">Ver ubicacion Gmaps</a>`
+
 
     
     )
