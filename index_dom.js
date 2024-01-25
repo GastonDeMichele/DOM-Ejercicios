@@ -6,6 +6,7 @@ import scrollTopButton from '/DOM/boton_scroll.js';
 import darkTheme from "/DOM/tema_oscuro.js";
 import responsiveResponsible from "/DOM/responsive_responsible.js";
 import responsiveTester from "/DOM/responsive_tester.js";
+import userDeviceInfo from "/DOM/deteccion_dispositivos.js";
 
 
 const d = document; /*para simplificar el document lo asignamos a una variable d */
@@ -39,6 +40,8 @@ d.addEventListener("DOMContentLoaded", e => {
     )
 
     responsiveTester("responsive-tester")
+
+    userDeviceInfo("user-device")
 
 })
 
