@@ -1,6 +1,6 @@
 const d = document
 
-export function responsiveTester(form){
+export default function responsiveTester(form){
 const $form = d.getElementById(form)
 let tester;
 

@@ -39,8 +39,8 @@ export default function userDeviceInfo(id) {
             }
         };
 
-        id.innerHTML = `
-        <ul>
+        $id.innerHTML = `
+        <ul> 
         <li>User Agent: <b>${ua}</b></li>
         <li>Plataforma: <b>${
             isMobile.any() ?isMobile.any() :isDesktop.any()
