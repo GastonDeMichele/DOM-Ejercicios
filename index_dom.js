@@ -7,6 +7,7 @@ import darkTheme from "/DOM/tema_oscuro.js";
 import responsiveResponsible from "/DOM/responsive_responsible.js";
 import responsiveTester from "/DOM/responsive_tester.js";
 import userDeviceInfo from "/DOM/deteccion_dispositivos.js";
+import detectRed from "/DOM/deteccion_red.js";
 
 
 const d = document; /*para simplificar el document lo asignamos a una variable d */
@@ -43,6 +44,7 @@ d.addEventListener("DOMContentLoaded", e => {
 
     userDeviceInfo("user-device")
 
+    detectRed()
 })
 
 darkTheme(".dark-theme-btn", "dark-mode")
