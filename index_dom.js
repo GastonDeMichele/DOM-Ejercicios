@@ -1,13 +1,11 @@
-import hamburguerMenu from "./DOM/menu_hamburguesa.js"; /*cuando es una sola funcion se usa export default*/
-import { digitalClock, alarm } from "./DOM/reloj.js"; //cuandon son varias solo export y se llaman entre llaves.
-import { moveBall, shortCuts } from "./DOM/teclado.js";
-import countdown from '/DOM/cuenta_regresiva.js';
-import scrollTopButton from '/DOM/boton_scroll.js';
-import darkTheme from "/DOM/tema_oscuro.js";
-import responsiveResponsible from "/DOM/responsive_responsible.js";
-import responsiveTester from "/DOM/responsive_tester.js";
-import userDeviceInfo from "/DOM/deteccion_dispositivos.js";
-import detectRed from "/DOM/deteccion_red.js";
+import countdown from './DOM/cuenta_regresiva.js';
+import scrollTopButton from './DOM/boton_scroll.js';
+import darkTheme from "./DOM/tema_oscuro.js";
+import responsiveResponsible from "./DOM/responsive_responsible.js";
+import responsiveTester from "./DOM/responsive_tester.js";
+import userDeviceInfo from "./DOM/deteccion_dispositivos.js";
+import detectRed from "./DOM/deteccion_red.js";
+
 
 
 const d = document; /*para simplificar el document lo asignamos a una variable d */

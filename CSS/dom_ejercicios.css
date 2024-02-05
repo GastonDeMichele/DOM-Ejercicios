@@ -250,3 +250,26 @@ img {
     color: var(--main-color);
 }
 
+
+
+
+/***** detect red styles ******/
+
+
+.offline,
+.online{
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  padding: 1rem;
+  font-size:1.5rem;
+  font-weight: bold;
+  text-align: center;
+  background-color: #A2C67B;
+  color: #F4F4F4;
+}
+
+.offline{
+  background-color: #FFA58E;
+}
+
