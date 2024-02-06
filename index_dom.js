@@ -8,6 +8,7 @@ import responsiveResponsible from "/DOM/responsive_responsible.js";
 import responsiveTester from "/DOM/responsive_tester.js";
 import userDeviceInfo from "/DOM/deteccion_dispositivos.js";
 import detectRed from "/DOM/deteccion_red.js";
+import webCam from "/DOM/deteccion_webcam.js";
 
 
 
@@ -45,11 +46,13 @@ d.addEventListener("DOMContentLoaded", e => {
 
     userDeviceInfo("user-device")
 
-    detectRed()
+    webCam("webcam")
+
+
 })
 
 darkTheme(".dark-theme-btn", "dark-mode")
-
+detectRed()
 
 //el teclado tiene 3 eventos, keyUp(cuando soltamos la tecla), keydown(cuando presionamos) y keyPress(cuando mantenemos presionado)
 
