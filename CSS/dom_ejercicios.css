@@ -72,6 +72,7 @@ img {
     right: 0;
     /*con todos estos valores en 0 estiramos el panel a que ocupe toda la pantalla*/
     width: 100%;
+    overflow-y: auto;
     background-color: var(--second-modal-color);
     transition: transform 0.3s ease;
     /*transicion del panel*/
