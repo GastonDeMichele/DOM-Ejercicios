@@ -10,6 +10,7 @@ import userDeviceInfo from "/DOM/deteccion_dispositivos.js";
 import detectRed from "/DOM/deteccion_red.js";
 import webCam from "/DOM/deteccion_webcam.js";
 import getGeolocation from "./DOM/geolocalizacion.js";
+import searchFilters from "./DOM/filtro_busquedas.js";
 
 
 
@@ -50,6 +51,8 @@ d.addEventListener("DOMContentLoaded", e => {
     webCam("webcam")
 
     getGeolocation("geolocation")
+
+    searchFilters(".card-filter", ".card")
 })
 
 darkTheme(".dark-theme-btn", "dark-mode")
