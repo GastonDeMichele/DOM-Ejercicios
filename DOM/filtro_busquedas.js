@@ -15,3 +15,19 @@ d.addEventListener("keyup", (e)=>{
     }
 });
 }
+
+
+/*otra forma de agregar o quitar la clase es usando toggle
+
+d.addEventListener("keyup", (e) => {
+    if (e.target.matches(input)) {
+        d.querySelectorAll(selector).forEach((el) => {
+            const textContentLowerCase = el.textContent.toLowerCase();
+            const searchTermLowerCase = e.target.value.toLowerCase();
+            
+            el.classList.toggle("filter", !textContentLowerCase.includes(searchTermLowerCase));
+        });
+    }
+});
+
+*/
